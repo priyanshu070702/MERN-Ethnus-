@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <center>
+        <div class="container" style="margin:200px;border:4px solid black;padding: 100px;">
+
+
+        
+    <button style="width:75px;height:25px" onclick="showDateTime()">show Date</button>
+
+<h3 id="TimeOutput"></h3>
+
+<button style="width:75px;height:25px" onclick="showDate1()">show Time</button>
+<h3 id="dateOutput"></h3>
+</div>
+</center>
+
+
+
+
+
+
+<script>
+
+    function showDate1(){
+            
+        document.getElementById('dateOutput').innerHTML=new Date();
+    }
+
+    function showDateTime(){
+        const d = new Date();
+const da=d.getDate();
+const m=d.getMonth();
+const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+
+const mb=monthNames[m];
+
+const year=d.getFullYear();
+document.getElementById('TimeOutput').innerHTML=da+'/'+mb+'/'+year;
+        }
+</script>
+</body>
+</html>
